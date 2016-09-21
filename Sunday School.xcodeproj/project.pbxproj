@@ -7,21 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631259331D61ED7400183475 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631259321D61ED7400183475 /* SearchCell.swift */; };
+		631E914B1D61C03100F9281B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E914A1D61C03100F9281B /* SearchVC.swift */; };
+		63323AF61D770DCA00A4D750 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63323AF51D770DCA00A4D750 /* DataService.swift */; };
+		634444C91D6B2C0D00617BB8 /* AddMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634444C81D6B2C0D00617BB8 /* AddMenuVC.swift */; };
+		636B35291D5A06A40007D7AE /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B35281D5A06A40007D7AE /* DropShadow.swift */; };
+		636B352B1D5A07070007D7AE /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B352A1D5A07070007D7AE /* HeaderView.swift */; };
+		637AF4EB1D5CB8A100C4F6F3 /* AbsenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AF4EA1D5CB8A100C4F6F3 /* AbsenCell.swift */; };
+		637AF4ED1D5CB9D500C4F6F3 /* Anak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AF4EC1D5CB9D500C4F6F3 /* Anak.swift */; };
 		638457221D58B33400D66281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638457211D58B33400D66281 /* AppDelegate.swift */; };
-		638457241D58B33400D66281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638457231D58B33400D66281 /* ViewController.swift */; };
+		638457241D58B33400D66281 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638457231D58B33400D66281 /* HomeVC.swift */; };
 		638457271D58B33400D66281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638457251D58B33400D66281 /* Main.storyboard */; };
 		638457291D58B33400D66281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638457281D58B33400D66281 /* Assets.xcassets */; };
 		6384572C1D58B33400D66281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6384572A1D58B33400D66281 /* LaunchScreen.storyboard */; };
+		638457391D58B9E400D66281 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638457381D58B9E400D66281 /* MainMenuVC.swift */; };
+		6384573B1D58C21500D66281 /* TweakMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384573A1D58C21500D66281 /* TweakMenuVC.swift */; };
+		6396D93F1D7EFAE60096B667 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6396D93E1D7EFAE60096B667 /* DataCell.swift */; };
+		63D21F9D1D6F1977003C03F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D21F9C1D6F1977003C03F8 /* Constants.swift */; };
+		63D21FA01D6F1A52003C03F8 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D21F9F1D6F1A52003C03F8 /* FancyField.swift */; };
+		63D21FA21D6F1A60003C03F8 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D21FA11D6F1A60003C03F8 /* FancyBtn.swift */; };
+		63D21FA41D6F2271003C03F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63D21FA31D6F2271003C03F8 /* GoogleService-Info.plist */; };
+		85A5FC4E3AE174937FA356C2 /* Pods_Sunday_School.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B775C8D175289BB756E335 /* Pods_Sunday_School.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A122DA2FFD72FF9549C83BA /* Pods-Sunday School.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunday School.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunday School/Pods-Sunday School.debug.xcconfig"; sourceTree = "<group>"; };
+		631259321D61ED7400183475 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		631E914A1D61C03100F9281B /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		63323AF51D770DCA00A4D750 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		634444C81D6B2C0D00617BB8 /* AddMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenuVC.swift; sourceTree = "<group>"; };
+		636B35281D5A06A40007D7AE /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		636B352A1D5A07070007D7AE /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		637AF4EA1D5CB8A100C4F6F3 /* AbsenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsenCell.swift; sourceTree = "<group>"; };
+		637AF4EC1D5CB9D500C4F6F3 /* Anak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anak.swift; sourceTree = "<group>"; };
 		6384571E1D58B33400D66281 /* Sunday School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sunday School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		638457211D58B33400D66281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		638457231D58B33400D66281 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		638457231D58B33400D66281 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		638457261D58B33400D66281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		638457281D58B33400D66281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6384572B1D58B33400D66281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6384572D1D58B33400D66281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638457381D58B9E400D66281 /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
+		6384573A1D58C21500D66281 /* TweakMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweakMenuVC.swift; sourceTree = "<group>"; };
+		6396D93E1D7EFAE60096B667 /* DataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		63D21F9C1D6F1977003C03F8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		63D21F9F1D6F1A52003C03F8 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		63D21FA11D6F1A60003C03F8 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		63D21FA31D6F2271003C03F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		63D21FA51D6F22C3003C03F8 /* Sunday School.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sunday School.entitlements"; sourceTree = "<group>"; };
+		9049D61C2FC487AEDBFD2F91 /* Pods-Sunday School.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunday School.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunday School/Pods-Sunday School.release.xcconfig"; sourceTree = "<group>"; };
+		D1B775C8D175289BB756E335 /* Pods_Sunday_School.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunday_School.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +64,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A5FC4E3AE174937FA356C2 /* Pods_Sunday_School.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		208D02857EE9FEFA3E64737F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1B775C8D175289BB756E335 /* Pods_Sunday_School.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63323AF41D770DB300A4D750 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				63323AF51D770DCA00A4D750 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		636B35271D5A06940007D7AE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				636B35281D5A06A40007D7AE /* DropShadow.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		638457151D58B33400D66281 = {
 			isa = PBXGroup;
 			children = (
 				638457201D58B33400D66281 /* Sunday School */,
 				6384571F1D58B33400D66281 /* Products */,
+				C625278B7B421EE99EF9B14F /* Pods */,
+				208D02857EE9FEFA3E64737F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +116,87 @@
 		638457201D58B33400D66281 /* Sunday School */ = {
 			isa = PBXGroup;
 			children = (
+				63D21FA51D6F22C3003C03F8 /* Sunday School.entitlements */,
+				636B35271D5A06940007D7AE /* Protocol */,
+				638457371D58B36C00D66281 /* Model */,
+				638457361D58B35D00D66281 /* View */,
+				638457351D58B35700D66281 /* Controller */,
+				63323AF41D770DB300A4D750 /* Services */,
+				638457341D58B34F00D66281 /* Resources */,
+				638457331D58B34600D66281 /* Util */,
 				638457211D58B33400D66281 /* AppDelegate.swift */,
-				638457231D58B33400D66281 /* ViewController.swift */,
 				638457251D58B33400D66281 /* Main.storyboard */,
-				638457281D58B33400D66281 /* Assets.xcassets */,
 				6384572A1D58B33400D66281 /* LaunchScreen.storyboard */,
+				638457281D58B33400D66281 /* Assets.xcassets */,
 				6384572D1D58B33400D66281 /* Info.plist */,
+				63D21FA31D6F2271003C03F8 /* GoogleService-Info.plist */,
 			);
 			path = "Sunday School";
+			sourceTree = "<group>";
+		};
+		638457331D58B34600D66281 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				63D21F9C1D6F1977003C03F8 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		638457341D58B34F00D66281 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		638457351D58B35700D66281 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				638457231D58B33400D66281 /* HomeVC.swift */,
+				638457381D58B9E400D66281 /* MainMenuVC.swift */,
+				631E914A1D61C03100F9281B /* SearchVC.swift */,
+				6384573A1D58C21500D66281 /* TweakMenuVC.swift */,
+				634444C81D6B2C0D00617BB8 /* AddMenuVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		638457361D58B35D00D66281 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63D21F9E1D6F19A6003C03F8 /* Customs */,
+				636B352A1D5A07070007D7AE /* HeaderView.swift */,
+				637AF4EA1D5CB8A100C4F6F3 /* AbsenCell.swift */,
+				631259321D61ED7400183475 /* SearchCell.swift */,
+				6396D93E1D7EFAE60096B667 /* DataCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		638457371D58B36C00D66281 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				637AF4EC1D5CB9D500C4F6F3 /* Anak.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		63D21F9E1D6F19A6003C03F8 /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				63D21F9F1D6F1A52003C03F8 /* FancyField.swift */,
+				63D21FA11D6F1A60003C03F8 /* FancyBtn.swift */,
+			);
+			name = Customs;
+			sourceTree = "<group>";
+		};
+		C625278B7B421EE99EF9B14F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A122DA2FFD72FF9549C83BA /* Pods-Sunday School.debug.xcconfig */,
+				9049D61C2FC487AEDBFD2F91 /* Pods-Sunday School.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 638457301D58B33400D66281 /* Build configuration list for PBXNativeTarget "Sunday School" */;
 			buildPhases = (
+				F910879879623D195A8AF991 /* 📦 Check Pods Manifest.lock */,
 				6384571A1D58B33400D66281 /* Sources */,
 				6384571B1D58B33400D66281 /* Frameworks */,
 				6384571C1D58B33400D66281 /* Resources */,
+				B1618CABBF80F729EE253E36 /* 📦 Embed Pods Frameworks */,
+				A6453B2F987DA81FCA4D7C59 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,7 +235,13 @@
 					6384571D1D58B33400D66281 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = GD8VREVBA4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6384572C1D58B33400D66281 /* LaunchScreen.storyboard in Resources */,
+				63D21FA41D6F2271003C03F8 /* GoogleService-Info.plist in Resources */,
 				638457291D58B33400D66281 /* Assets.xcassets in Resources */,
 				638457271D58B33400D66281 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +277,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6453B2F987DA81FCA4D7C59 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunday School/Pods-Sunday School-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1618CABBF80F729EE253E36 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunday School/Pods-Sunday School-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F910879879623D195A8AF991 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6384571A1D58B33400D66281 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638457241D58B33400D66281 /* ViewController.swift in Sources */,
+				63D21FA21D6F1A60003C03F8 /* FancyBtn.swift in Sources */,
+				637AF4ED1D5CB9D500C4F6F3 /* Anak.swift in Sources */,
+				634444C91D6B2C0D00617BB8 /* AddMenuVC.swift in Sources */,
+				6396D93F1D7EFAE60096B667 /* DataCell.swift in Sources */,
+				631259331D61ED7400183475 /* SearchCell.swift in Sources */,
+				636B35291D5A06A40007D7AE /* DropShadow.swift in Sources */,
+				636B352B1D5A07070007D7AE /* HeaderView.swift in Sources */,
+				638457241D58B33400D66281 /* HomeVC.swift in Sources */,
+				63323AF61D770DCA00A4D750 /* DataService.swift in Sources */,
 				638457221D58B33400D66281 /* AppDelegate.swift in Sources */,
+				63D21F9D1D6F1977003C03F8 /* Constants.swift in Sources */,
+				6384573B1D58C21500D66281 /* TweakMenuVC.swift in Sources */,
+				631E914B1D61C03100F9281B /* SearchVC.swift in Sources */,
+				637AF4EB1D5CB8A100C4F6F3 /* AbsenCell.swift in Sources */,
+				63D21FA01D6F1A52003C03F8 /* FancyField.swift in Sources */,
+				638457391D58B9E400D66281 /* MainMenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,27 +464,43 @@
 		};
 		638457311D58B33400D66281 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A122DA2FFD72FF9549C83BA /* Pods-Sunday School.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Sunday School/Sunday School.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GD8VREVBA4;
 				INFOPLIST_FILE = "Sunday School/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ligun.Sunday-School";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		638457321D58B33400D66281 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9049D61C2FC487AEDBFD2F91 /* Pods-Sunday School.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Sunday School/Sunday School.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Gunawan (GD8VREVBA4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GD8VREVBA4;
 				INFOPLIST_FILE = "Sunday School/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ligun.Sunday-School";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -300,6 +523,7 @@
 				638457321D58B33400D66281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
