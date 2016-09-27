@@ -35,7 +35,7 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var yerikhoTotal: UILabel!
     @IBOutlet weak var totalBySchedule: UILabel!
     
-    var isIr1Selected = false
+    var isIr1Selected = true
     var isIr2Selected = false
     var isIr3Selected = false
     var isIr4Selected = false
@@ -53,15 +53,16 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var yerikhoCount: Int = 0
     var totalCount: Int = 0
     
-    var selectedIbadahRaya: String!
-    var currentDisciples: FIRDatabaseReference!
-    var checkDisciples: FIRDatabaseQuery!
+    var selectedIbadahRaya: String! = "ibadah1"
+    var currentIRDisciples: FIRDatabaseReference! = DataService.ds.REF_SCHEDULES
+    var queryDisciples: FIRDatabaseQuery! = DataService.ds.REF_DISCIPLES.queryOrdered(byChild: "name")
     var lastUsage: FIRDatabaseReference!
-    
     
     var absenAnak = [Anak]()
     
-    
+    var irDisciples: FIRDatabaseReference! = DataService.ds.REF_SCHEDULES
+    var handler: UInt!
+    var btnHandler: UInt!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +71,67 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableViewAbsen.delegate = self
         tableViewAbsen.dataSource = self
+        btnIR1.setTitleColor(UIColor.black, for: .normal)
         
         checkLogTime()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("ABSEN: starting anakAbsen count = \(absenAnak.count) ")
+        
+        handler = irDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").observe(.value, with: { (discipleHereSnaphots) in
+            
+            if let snaps = discipleHereSnaphots.children.allObjects as? [FIRDataSnapshot] {
+                for snap1 in snaps {
+                    print("OBSERVER: Start Observing ")
+                    let discHereID = snap1.key
+                    print("OBSERVER: discHereID = \(discHereID) ")
+                    self.queryDisciples.observeSingleEvent(of: .value, with: { (discDataSnapshot) in
+                        if let snapshot = discDataSnapshot.children.allObjects as? [FIRDataSnapshot] {
+                            for snap2 in snapshot {
+                                if let anakDict = snap2.value as? Dictionary<String, AnyObject> {
+                                    let key = snap2.key
+                                    if key == discHereID {
+                                        let anak = Anak(discKey: key, discData: anakDict)
+                                        print("OBSERVER: anak added to table = \(anak.name)")
+                                        self.countGrade(discGrade: anak.grade.lowercased())
+                                        self.absenAnak.append(anak)
+                                    }
+                                }
+                            }
+                        }
+                        print("ABSEN: anakAbsen before reload = \(self.absenAnak.count) ")
+                        self.absenAnak.sort { $0.name < $1.name }
+                        self.totalBySchedule.text = "\(self.totalCount)"
+                        self.tableViewAbsen.reloadData()
+                    })
+                }
+            }
+        })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        irDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").removeObserver(withHandle: handler)
+        
+        if btnHandler != nil {
+            currentIRDisciples.child("ibadah1").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
+            currentIRDisciples.child("ibadah2").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
+            currentIRDisciples.child("ibadah3").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
+            currentIRDisciples.child("ibadah4").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
+        }
+        
+        absenAnak.removeAll()
+        
+        print("ABSEN: View Disappear > removing all data from Array ")
+        print("ABSEN: absenAnak after view disappeared = \(absenAnak.count) ")
+        print("OBSERVER: View Disappear > removing all data from Array ")
+        
+        makeZero()
     }
     
     
@@ -98,35 +157,22 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func showAlert() {
-        
-        let alert = PMAlertController(title: "Schedule not selected", description: "Choose Ibadah Raya time for absent.", image: UIImage(named: "clock.png"), style: .alert)
-        
-        alert.addAction(PMAlertAction(title: "Ok", style: .default, action: { () in
-            print("Ok")
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     func retrieveDisciplesInSchedule(waktuIbadah: String!) {
         
-        currentDisciples = DataService.ds.REF_SCHEDULES.child(waktuIbadah).child("scheduleName").child("disciplesHere")
-        checkDisciples = DataService.ds.REF_DISCIPLES.queryOrdered(byChild: "name")
-        self.absenAnak.removeAll()
-        self.tableViewAbsen.reloadData()
-        currentDisciples.observe( .value, with: {(snapshotschedule) in
-            if let snapshotSched = snapshotschedule.children.allObjects as? [FIRDataSnapshot] {
-                for snap1 in snapshotSched {
-                    self.absenAnak.removeAll() // might not be the best
-                    self.makeZero() // this too
-                    let discKey = snap1.key
-                    self.checkDisciples.observeSingleEvent(of: .value, with: { (snapshot) in
-                        if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                            for snap in snapshot {
-                                if let anakDict = snap.value as? Dictionary<String, AnyObject> {
-                                    let key = snap.key
-                                    if key == discKey {
+        absenAnak.removeAll()
+        tableViewAbsen.reloadData()
+        
+        btnHandler = currentIRDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").observe(.value, with: { (discipleHereSnaphots) in
+            
+            if let snaps = discipleHereSnaphots.children.allObjects as? [FIRDataSnapshot] {
+                for snap1 in snaps {
+                    let discHereID = snap1.key
+                    self.queryDisciples.observeSingleEvent(of: .value, with: { (discDataSnapshot) in
+                        if let snapshot = discDataSnapshot.children.allObjects as? [FIRDataSnapshot] {
+                            for snap2 in snapshot {
+                                if let anakDict = snap2.value as? Dictionary<String, AnyObject> {
+                                    let key = snap2.key
+                                    if key == discHereID {
                                         let anak = Anak(discKey: key, discData: anakDict)
                                         self.countGrade(discGrade: anak.grade.lowercased())
                                         self.absenAnak.append(anak)
@@ -134,6 +180,7 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                 }
                             }
                         }
+                        self.absenAnak.sort { $0.name < $1.name }
                         self.totalBySchedule.text = "\(self.totalCount)"
                         self.tableViewAbsen.reloadData()
                     })
@@ -300,6 +347,7 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             makeZero()
             selectedIbadahRaya = "ibadah3"
             retrieveDisciplesInSchedule(waktuIbadah: selectedIbadahRaya)
+            
             searchTxt.isUserInteractionEnabled = true
         
             btnIR2.setTitleColor(UIColor.lightGray, for: .normal)
@@ -319,6 +367,7 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             makeZero()
             selectedIbadahRaya = "ibadah4"
             retrieveDisciplesInSchedule(waktuIbadah: selectedIbadahRaya)
+            
             searchTxt.isUserInteractionEnabled = true
         
             btnIR2.setTitleColor(UIColor.lightGray, for: .normal)
@@ -342,26 +391,12 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func searchOnClick(_ sender: AnyObject) {
         
-        if isIr1Selected == false && isIr2Selected == false && isIr3Selected == false && isIr4Selected == false {
-            
-            showAlert()
-            
-        } else {
-        
-            performSegue(withIdentifier: SEGUE_SEARCH, sender: UITextField.self)
-        }
+        performSegue(withIdentifier: SEGUE_SEARCH, sender: UITextField.self)
     }
     
     @IBAction func searchBtnOnClick(_ sender: AnyObject) {
-        
-        if isIr1Selected == false && isIr2Selected == false && isIr3Selected == false && isIr4Selected == false {
             
-            showAlert()
-            
-        } else {
-            
-            performSegue(withIdentifier: SEGUE_SEARCH, sender: UIButton.self)
-        }
+        performSegue(withIdentifier: SEGUE_SEARCH, sender: UIButton.self)
     }
     
 }

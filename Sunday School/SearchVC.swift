@@ -23,9 +23,10 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     var selectedAnak: Anak!
     var inSearchMode = false
     var schedRef: FIRDatabaseReference!
-    var currentDisciples: FIRDatabaseReference!
+    var currentDisciples: FIRDatabaseReference! = DataService.ds.REF_DISCIPLES
     var selectedSchedule: String!
     var isEntered = false
+    var handleSearch: UInt!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,12 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         tableView.delegate = self
         searchBar.delegate = self
         
-        DataService.ds.REF_DISCIPLES.observe(.value, with: { (snapshot) in
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        handleSearch = currentDisciples.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -45,13 +51,18 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
                         let key = snap.key
                         let anak = Anak(discKey: key, discData: anakDict)
                         self.searchAnak.append(anak)
-                        print("ANAKSEARCH: Nama anak dalam searchAnak = \(anak.name)")
                     }
                 }
             }
         })
         
-        print("SCHEDULE: Selected schedule from main menu = \(selectedSchedule)")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        currentDisciples.removeObserver(withHandle: handleSearch)
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

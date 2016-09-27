@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import PMAlertController
 
 class HomeVC: UIViewController {
 
@@ -44,17 +45,13 @@ class HomeVC: UIViewController {
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
-                        if error != nil {
-                            print("DAVID: Unable to authenticated with Firebase")
-                        } else {
-                            print("DAVID: Email User created in Firebase")
-                            if let user = user {
-                                let userData = ["provider": user.providerID]
-                                self.completeSignIn(id: user.uid, userData: userData)
-                            }
-                        }
-                    })
+                    let alert = PMAlertController(title: "Email / Password Wrong", description: "Please kindly check your email / password again", image: UIImage(named: "acc.png"), style: .alert)
+                    
+                    alert.addAction(PMAlertAction(title: "Ok", style: .default, action: { () in
+                        print("Ok")
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
                 }
             })
         
