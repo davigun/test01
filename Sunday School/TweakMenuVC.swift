@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import KRProgressHUD
+import PMAlertController
 
 class TweakMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -141,6 +142,20 @@ class TweakMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         }
     }
     
+    @IBAction func upBtnTapped(_ sender: AnyObject) {
+        
+        let alert = PMAlertController(title: "Upgrade", description: "By pressing this button, you will upgrade their grade", image: UIImage(named: "clock.png"), style: .alert)
+        
+        alert.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
+            print("Cancel")
+        }))
+        
+        alert.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
+            print("Ok")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     @IBAction func editBtnTapped(_ sender: AnyObject) {
         
         KRProgressHUD.showSuccess(progressHUDStyle: .white, maskType: nil, activityIndicatorStyle: .white, font: nil, message: "Updated")

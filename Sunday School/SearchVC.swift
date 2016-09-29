@@ -46,7 +46,6 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         handleSearch = currentDisciples.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
-                    print("SNAP: \(snap)")
                     if let anakDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let anak = Anak(discKey: key, discData: anakDict)

@@ -80,15 +80,13 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("ABSEN: starting anakAbsen count = \(absenAnak.count) ")
+        print("OBS: Observer in willAppear Start for selected Ibadah = \(selectedIbadahRaya) ")
         
         handler = irDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").observe(.value, with: { (discipleHereSnaphots) in
             
             if let snaps = discipleHereSnaphots.children.allObjects as? [FIRDataSnapshot] {
                 for snap1 in snaps {
-                    print("OBSERVER: Start Observing ")
                     let discHereID = snap1.key
-                    print("OBSERVER: discHereID = \(discHereID) ")
                     self.queryDisciples.observeSingleEvent(of: .value, with: { (discDataSnapshot) in
                         if let snapshot = discDataSnapshot.children.allObjects as? [FIRDataSnapshot] {
                             for snap2 in snapshot {
@@ -96,14 +94,12 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                     let key = snap2.key
                                     if key == discHereID {
                                         let anak = Anak(discKey: key, discData: anakDict)
-                                        print("OBSERVER: anak added to table = \(anak.name)")
                                         self.countGrade(discGrade: anak.grade.lowercased())
                                         self.absenAnak.append(anak)
                                     }
                                 }
                             }
                         }
-                        print("ABSEN: anakAbsen before reload = \(self.absenAnak.count) ")
                         self.absenAnak.sort { $0.name < $1.name }
                         self.totalBySchedule.text = "\(self.totalCount)"
                         self.tableViewAbsen.reloadData()
@@ -126,10 +122,8 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
         absenAnak.removeAll()
+        tableViewAbsen.reloadData()
         
-        print("ABSEN: View Disappear > removing all data from Array ")
-        print("ABSEN: absenAnak after view disappeared = \(absenAnak.count) ")
-        print("OBSERVER: View Disappear > removing all data from Array ")
         
         makeZero()
     }
@@ -159,12 +153,17 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func retrieveDisciplesInSchedule(waktuIbadah: String!) {
         
-        absenAnak.removeAll()
-        tableViewAbsen.reloadData()
+        //absenAnak.removeAll()
+        //tableViewAbsen.reloadData() This is the best fix right now
+        
+        print("OBS: Observer in retrieveDisciplesInSchedule Start for selected Ibadah = \(waktuIbadah) ")
         
         btnHandler = currentIRDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").observe(.value, with: { (discipleHereSnaphots) in
             
             if let snaps = discipleHereSnaphots.children.allObjects as? [FIRDataSnapshot] {
+                self.absenAnak.removeAll()
+                self.tableViewAbsen.reloadData()
+                self.makeZero()
                 for snap1 in snaps {
                     let discHereID = snap1.key
                     self.queryDisciples.observeSingleEvent(of: .value, with: { (discDataSnapshot) in
