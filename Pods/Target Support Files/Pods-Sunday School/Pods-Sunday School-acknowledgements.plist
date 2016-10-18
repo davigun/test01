@@ -66,6 +66,14 @@ THE SOFTWARE.</string>
 			<key>FooterText</key>
 			<string>Copyright 2016 Google</string>
 			<key>Title</key>
+			<string>FirebaseCore</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2016 Google</string>
+			<key>Title</key>
 			<string>FirebaseDatabase</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
@@ -88,7 +96,7 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 Google Inc.</string>
+			<string>Copyright 2016 Google</string>
 			<key>Title</key>
 			<string>GoogleInterchangeUtilities</string>
 			<key>Type</key>
@@ -96,7 +104,7 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 Google Inc.</string>
+			<string>Copyright 2016 Google</string>
 			<key>Title</key>
 			<string>GoogleNetworkingUtilities</string>
 			<key>Type</key>
@@ -104,7 +112,7 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 Google Inc.</string>
+			<string>Copyright 2016 Google</string>
 			<key>Title</key>
 			<string>GoogleSymbolUtilities</string>
 			<key>Type</key>
@@ -112,7 +120,7 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 Google Inc.</string>
+			<string>Copyright 2016 Google</string>
 			<key>Title</key>
 			<string>GoogleUtilities</string>
 			<key>Type</key>
@@ -179,7 +187,7 @@ THE SOFTWARE.</string>
 			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
-Copyright (c) 2015 Rados&#322;aw Pietruszewski
+Copyright (c) 2015-2016 Rados&#322;aw Pietruszewski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -35,6 +35,10 @@ Copyright 2016 Google
 
 Copyright 2016 Google
 
+## FirebaseCore
+
+Copyright 2016 Google
+
 ## FirebaseDatabase
 
 Copyright 2016 Google
@@ -49,19 +53,19 @@ Copyright 2016 Google
 
 ## GoogleInterchangeUtilities
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google
 
 ## GoogleNetworkingUtilities
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google
 
 ## GoogleSymbolUtilities
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google
 
 ## GoogleUtilities
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google
 
 ## KRProgressHUD
 
@@ -116,7 +120,7 @@ THE SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Radosław Pietruszewski
+Copyright (c) 2015-2016 Radosław Pietruszewski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

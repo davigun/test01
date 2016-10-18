@@ -140,12 +140,24 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         dismiss(animated: true, completion: nil)
     }
     
+    func handleAdd() {
+        
+        schedRef = DataService.ds.REF_SCHEDULES.childByAutoId()
+        
+        let values: Dictionary<String, AnyObject> = [
+            "name": selectedAnak.name as AnyObject,
+            "class": selectedAnak.grade as AnyObject,
+            "ibadah": selectedSchedule as AnyObject
+        ]
+        
+        self.schedRef.setValue(values)
+    }
+    
     @IBAction func enterBtnTapped(_ sender: AnyObject) {
             
             KRProgressHUD.showSuccess(progressHUDStyle: .white, maskType: nil, activityIndicatorStyle: .white, font: nil, message: "Enrolled")
-            
-            schedRef = DataService.ds.REF_SCHEDULES.child(selectedSchedule).child("scheduleName").child("disciplesHere").child(selectedAnak.discKey)
-            self.schedRef.setValue(true)
+        
+            handleAdd()
             
             KRProgressHUD.dismiss(nil)
             

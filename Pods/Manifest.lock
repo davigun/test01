@@ -1,26 +1,28 @@
 PODS:
   - DeviceKit (1.0.0)
-  - Firebase/Analytics (3.6.0):
-    - FirebaseAnalytics (= 3.4.2)
-  - Firebase/Auth (3.6.0):
-    - Firebase/Analytics
+  - Firebase/Auth (3.7.1):
+    - Firebase/Core
     - FirebaseAuth (= 3.0.5)
-  - Firebase/Core (3.6.0):
-    - Firebase/Analytics
-  - Firebase/Database (3.6.0):
-    - Firebase/Analytics
+  - Firebase/Core (3.7.1):
+    - FirebaseAnalytics (= 3.4.4)
+    - FirebaseCore (= 3.4.3)
+  - Firebase/Database (3.7.1):
+    - Firebase/Core
     - FirebaseDatabase (= 3.0.3)
-  - Firebase/Storage (3.6.0):
-    - Firebase/Analytics
+  - Firebase/Storage (3.7.1):
+    - Firebase/Core
     - FirebaseStorage (= 1.0.3)
-  - FirebaseAnalytics (3.4.2):
+  - FirebaseAnalytics (3.4.4):
+    - FirebaseCore (~> 3.4)
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
-    - GoogleUtilities (~> 1.2)
   - FirebaseAuth (3.0.5):
     - FirebaseAnalytics (~> 3.3)
     - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseCore (3.4.3):
+    - GoogleInterchangeUtilities (~> 1.2)
     - GoogleUtilities (~> 1.2)
   - FirebaseDatabase (3.0.3):
     - FirebaseAnalytics (~> 3.3)
@@ -28,16 +30,16 @@ PODS:
   - FirebaseStorage (1.0.3):
     - FirebaseAnalytics (~> 3.3)
     - GoogleNetworkingUtilities (~> 1.2)
-  - GoogleInterchangeUtilities (1.2.1):
-    - GoogleSymbolUtilities (~> 1.0)
-  - GoogleNetworkingUtilities (1.2.1):
-    - GoogleSymbolUtilities (~> 1.0)
-  - GoogleSymbolUtilities (1.1.1)
-  - GoogleUtilities (1.3.1):
-    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleNetworkingUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleUtilities (1.3.2):
+    - GoogleSymbolUtilities (~> 1.1)
   - KRProgressHUD (2.0.0)
-  - PMAlertController (2.0.0)
-  - SwiftyTimer (1.4.0)
+  - PMAlertController (2.0.1)
+  - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
   - DeviceKit (~> 1.0)
@@ -56,24 +58,25 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftyTimer:
-    :commit: 8cb3860bfef05fc86860b73398a02b96ae0b789b
+    :commit: a51e1b0a10787a42e45b14553f3803f68c790291
     :git: https://github.com/radex/SwiftyTimer.git
 
 SPEC CHECKSUMS:
   DeviceKit: ddead7f3a7c9603ba3a63cb748566428c38dd11f
-  Firebase: 34187200ef4979dbd485c7aa685ef078bf587c86
-  FirebaseAnalytics: 3f5358d9104adf159cc8d99b7b501e50099a39ad
+  Firebase: be473484f0d515e72ffd04acf22f981773c23e58
+  FirebaseAnalytics: 0533a00b681e08fd0b2cd0444b7ddf0ef9fd7a1a
   FirebaseAuth: 75a062bbf2d3c97d1e6e55bbc110e13a6853e25d
+  FirebaseCore: 5a885548bbc5f0c410b04f8e9ac9d73ff1221907
   FirebaseDatabase: 750a4a0fe18ef114318876fd654b2d9c671e0992
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   FirebaseStorage: 3992817bf405f5c1a4f8349678d22724cd0ef509
-  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
-  GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
-  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
-  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   KRProgressHUD: fa77b02194e532579579d5f0953282dab1c961c5
-  PMAlertController: edd2ae1f2a31ec77db72103a2dd81a77d6b5de95
-  SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649
+  PMAlertController: 8f809a67e740bd6ce1bb7d6017c12c94e997f64b
+  SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
 PODFILE CHECKSUM: 9c2a9034261d114b4d895a21c0fa66db4c92c9ac
 

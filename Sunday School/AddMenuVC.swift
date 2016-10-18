@@ -26,7 +26,7 @@ class AddMenuVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     
     var pickerData: [String] = [String]()
     var selectedClass: String!
-    var origin = "PRJ"
+    var origin = "PRJ" // ORIGIN CHANGE TO DYNAMIC FROM SERVER
     let device = Device()
 
     override func viewDidLoad() {
@@ -51,6 +51,8 @@ class AddMenuVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         }
         
         hideKeyboardWhenTappedAround()
+        
+        
         
     }
     

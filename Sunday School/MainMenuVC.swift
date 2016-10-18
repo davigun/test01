@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PMAlertController
 import Firebase
 import SwiftyTimer
 
@@ -40,25 +39,21 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var isIr3Selected = false
     var isIr4Selected = false
     
-    var kana1Count: Int = 0
-    var kana2Count: Int = 0
-    var betlehemCount: Int = 0
-    var yerusalemCount: Int = 0
-    var sinaiCount: Int = 0
-    var yudeaCount: Int = 0
-    var samariaCount: Int = 0
-    var galileaCount: Int = 0
-    var kanaanCount: Int = 0
-    var nazarethCount: Int = 0
-    var yerikhoCount: Int = 0
-    var totalCount: Int = 0
+    var totalCount = 0
     
     var selectedIbadahRaya: String! = "ibadah1"
     var currentIRDisciples: FIRDatabaseReference! = DataService.ds.REF_SCHEDULES
-    var queryDisciples: FIRDatabaseQuery! = DataService.ds.REF_DISCIPLES.queryOrdered(byChild: "name")
-    var lastUsage: FIRDatabaseReference!
     
-    var absenAnak = [Anak]()
+    var absenAnak = [Absen]()
+    var absen1 = [Absen]()
+    var absen2 = [Absen]()
+    var absen3 = [Absen]()
+    var absen4 = [Absen]()
+    
+    var jumlah1 = calc()
+    var jumlah2 = calc()
+    var jumlah3 = calc()
+    var jumlah4 = calc()
     
     var irDisciples: FIRDatabaseReference! = DataService.ds.REF_SCHEDULES
     var handler: UInt!
@@ -73,59 +68,50 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableViewAbsen.dataSource = self
         btnIR1.setTitleColor(UIColor.black, for: .normal)
         
-        checkLogTime()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("OBS: Observer in willAppear Start for selected Ibadah = \(selectedIbadahRaya) ")
-        
-        handler = irDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").observe(.value, with: { (discipleHereSnaphots) in
-            
-            if let snaps = discipleHereSnaphots.children.allObjects as? [FIRDataSnapshot] {
-                for snap1 in snaps {
-                    let discHereID = snap1.key
-                    self.queryDisciples.observeSingleEvent(of: .value, with: { (discDataSnapshot) in
-                        if let snapshot = discDataSnapshot.children.allObjects as? [FIRDataSnapshot] {
-                            for snap2 in snapshot {
-                                if let anakDict = snap2.value as? Dictionary<String, AnyObject> {
-                                    let key = snap2.key
-                                    if key == discHereID {
-                                        let anak = Anak(discKey: key, discData: anakDict)
-                                        self.countGrade(discGrade: anak.grade.lowercased())
-                                        self.absenAnak.append(anak)
-                                    }
-                                }
-                            }
-                        }
-                        self.absenAnak.sort { $0.name < $1.name }
-                        self.totalBySchedule.text = "\(self.totalCount)"
-                        self.tableViewAbsen.reloadData()
-                    })
+        absenAnak.removeAll()
+        handler = currentIRDisciples.observe(.childAdded, with: { (snapshot) in
+            if let snapDict = snapshot.value as? Dictionary<String, AnyObject> {
+                let key = snapshot.key
+                let anak = Absen(discKey: key, discData: snapDict)
+                if anak.ibadah == "ibadah1" {
+                    self.jumlah1.addCap(currGrade: anak.grade.lowercased())
+                    self.absen1.append(anak)
+                } else if anak.ibadah == "ibadah2" {
+                    self.jumlah2.addCap(currGrade: anak.grade.lowercased())
+                    self.absen2.append(anak)
+                } else if anak.ibadah == "ibadah3" {
+                    self.jumlah3.addCap(currGrade: anak.grade.lowercased())
+                    self.absen3.append(anak)
+                } else if anak.ibadah == "ibadah4" {
+                    self.jumlah4.addCap(currGrade: anak.grade.lowercased())
+                    self.absen4.append(anak)
                 }
+            }; DispatchQueue.main.async {
+                self.totalAnakLbl.text = "\(self.totalCount)"
+                self.refreshTable()
             }
-        })
-    }
+        }) { (error) in
+            print(error)
+        }    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        irDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").removeObserver(withHandle: handler)
-        
-        if btnHandler != nil {
-            currentIRDisciples.child("ibadah1").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
-            currentIRDisciples.child("ibadah2").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
-            currentIRDisciples.child("ibadah3").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
-            currentIRDisciples.child("ibadah4").child("scheduleName").child("disciplesHere").removeObserver(withHandle: btnHandler)
-        }
-        
+        currentIRDisciples.removeObserver(withHandle: handler)
         absenAnak.removeAll()
-        tableViewAbsen.reloadData()
-        
-        
-        makeZero()
+        absen1.removeAll()
+        absen2.removeAll()
+        absen3.removeAll()
+        absen4.removeAll()
+        jumlah1.emptyAll()
+        jumlah2.emptyAll()
+        jumlah3.emptyAll()
+        jumlah4.emptyAll()
     }
     
     
@@ -152,150 +138,122 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func retrieveDisciplesInSchedule(waktuIbadah: String!) {
+        self.absenAnak.removeAll()
         
-        //absenAnak.removeAll()
-        //tableViewAbsen.reloadData() This is the best fix right now
-        
-        print("OBS: Observer in retrieveDisciplesInSchedule Start for selected Ibadah = \(waktuIbadah) ")
-        
-        btnHandler = currentIRDisciples.child(selectedIbadahRaya).child("scheduleName").child("disciplesHere").observe(.value, with: { (discipleHereSnaphots) in
-            
-            if let snaps = discipleHereSnaphots.children.allObjects as? [FIRDataSnapshot] {
-                self.absenAnak.removeAll()
-                self.tableViewAbsen.reloadData()
-                self.makeZero()
-                for snap1 in snaps {
-                    let discHereID = snap1.key
-                    self.queryDisciples.observeSingleEvent(of: .value, with: { (discDataSnapshot) in
-                        if let snapshot = discDataSnapshot.children.allObjects as? [FIRDataSnapshot] {
-                            for snap2 in snapshot {
-                                if let anakDict = snap2.value as? Dictionary<String, AnyObject> {
-                                    let key = snap2.key
-                                    if key == discHereID {
-                                        let anak = Anak(discKey: key, discData: anakDict)
-                                        self.countGrade(discGrade: anak.grade.lowercased())
-                                        self.absenAnak.append(anak)
-                                    }
-                                }
-                            }
-                        }
-                        self.absenAnak.sort { $0.name < $1.name }
-                        self.totalBySchedule.text = "\(self.totalCount)"
-                        self.tableViewAbsen.reloadData()
-                    })
-                }
-            }
-        })
+        if waktuIbadah == "ibadah1" {
+            self.absenAnak = self.absen1
+            fillGradeLabel(currSched: "j1")
+        } else if waktuIbadah == "ibadah2" {
+            self.absenAnak = self.absen2
+            fillGradeLabel(currSched: "j2")
+        } else if waktuIbadah == "ibadah3" {
+            self.absenAnak = self.absen3
+            fillGradeLabel(currSched: "j3")
+        } else if waktuIbadah == "ibadah4" {
+            self.absenAnak = self.absen4
+            fillGradeLabel(currSched: "j4")
+        }
+        self.absenAnak.sort { $0.name < $1.name }
+        tableViewAbsen.reloadData()
+    }
+   
+    func refreshTable() {
+        if isIr1Selected {
+            self.absenAnak = self.absen1
+            fillGradeLabel(currSched: "j1")
+        } else if isIr2Selected {
+            self.absenAnak = self.absen2
+            fillGradeLabel(currSched: "j2")
+        } else if isIr3Selected {
+            self.absenAnak = self.absen3
+            fillGradeLabel(currSched: "j3")
+        } else if isIr4Selected {
+            self.absenAnak = self.absen4
+            fillGradeLabel(currSched: "j4")
+        }
+        self.absenAnak.sort { $0.name < $1.name }
+        tableViewAbsen.reloadData()
     }
     
-    func checkLogTime() {
-        let userID = FIRAuth.auth()?.currentUser?.uid
-        lastUsage = DataService.ds.REF_USERS.child(userID!)
-        let timeStamp = NSDate().timeIntervalSince1970
-        lastUsage.observeSingleEvent(of: .value, with: { (snapshot) in
-            let timeFromServer = snapshot.value as! [String : AnyObject]
-            let timeInDecimal = timeFromServer["logTime"] as! Double
-            let date = NSDate(timeIntervalSince1970: timeInDecimal)
-            let elapsedTime = NSDate().timeIntervalSince(date as Date)
-            let duration = Int(elapsedTime)
-            if duration > 86400 {
-                let editLog: Dictionary<String, AnyObject> = [
-                    "logTime": timeStamp as AnyObject
-                ]
-                let firebaseEditTime = DataService.ds.REF_USERS.child(userID!)
-                firebaseEditTime.updateChildValues(editLog)
-                self.deleteDataInSchedule()
-            }
-        }) { (error) in
-            print(error.localizedDescription)
+    func fillGradeLabel(currSched: String!) {
+        
+        if currSched == "j1" {
+            self.kana1Total.text = "\(self.jumlah1.kana1)"
+            self.kana2Total.text = "\(self.jumlah1.kana2)"
+            self.betlehemTotal.text = "\(self.jumlah1.betlehem)"
+            self.yerusalemTotal.text = "\(self.jumlah1.yerusalem)"
+            self.sinaiTotal.text = "\(self.jumlah1.sinai)"
+            self.yudeaTotal.text = "\(self.jumlah1.yudea)"
+            self.galileaTotal.text = "\(self.jumlah1.galilea)"
+            self.samariaTotal.text = "\(self.jumlah1.samaria)"
+            self.kanaanTotal.text = "\(self.jumlah1.kanaan)"
+            self.nazarethTotal.text = "\(self.jumlah1.nazareth)"
+            self.yerikhoTotal.text = "\(self.jumlah1.yerikho)"
+            self.totalBySchedule.text = "\(self.jumlah1.getTotal(input: 0))"
+        } else if currSched == "j2" {
+            self.kana1Total.text = "\(self.jumlah2.kana1)"
+            self.kana2Total.text = "\(self.jumlah2.kana2)"
+            self.betlehemTotal.text = "\(self.jumlah2.betlehem)"
+            self.yerusalemTotal.text = "\(self.jumlah2.yerusalem)"
+            self.sinaiTotal.text = "\(self.jumlah2.sinai)"
+            self.yudeaTotal.text = "\(self.jumlah2.yudea)"
+            self.galileaTotal.text = "\(self.jumlah2.galilea)"
+            self.samariaTotal.text = "\(self.jumlah2.samaria)"
+            self.kanaanTotal.text = "\(self.jumlah2.kanaan)"
+            self.nazarethTotal.text = "\(self.jumlah2.nazareth)"
+            self.yerikhoTotal.text = "\(self.jumlah2.yerikho)"
+            self.totalBySchedule.text = "\(self.jumlah2.getTotal(input: 0))"
+        } else if currSched == "j3" {
+            self.kana1Total.text = "\(self.jumlah3.kana1)"
+            self.kana2Total.text = "\(self.jumlah3.kana2)"
+            self.betlehemTotal.text = "\(self.jumlah3.betlehem)"
+            self.yerusalemTotal.text = "\(self.jumlah3.yerusalem)"
+            self.sinaiTotal.text = "\(self.jumlah3.sinai)"
+            self.yudeaTotal.text = "\(self.jumlah3.yudea)"
+            self.galileaTotal.text = "\(self.jumlah3.galilea)"
+            self.samariaTotal.text = "\(self.jumlah3.samaria)"
+            self.kanaanTotal.text = "\(self.jumlah3.kanaan)"
+            self.nazarethTotal.text = "\(self.jumlah3.nazareth)"
+            self.yerikhoTotal.text = "\(self.jumlah3.yerikho)"
+            self.totalBySchedule.text = "\(self.jumlah3.getTotal(input: 0))"
+        } else if currSched == "j4" {
+            self.kana1Total.text = "\(self.jumlah4.kana1)"
+            self.kana2Total.text = "\(self.jumlah4.kana2)"
+            self.betlehemTotal.text = "\(self.jumlah4.betlehem)"
+            self.yerusalemTotal.text = "\(self.jumlah4.yerusalem)"
+            self.sinaiTotal.text = "\(self.jumlah4.sinai)"
+            self.yudeaTotal.text = "\(self.jumlah4.yudea)"
+            self.galileaTotal.text = "\(self.jumlah4.galilea)"
+            self.samariaTotal.text = "\(self.jumlah4.samaria)"
+            self.kanaanTotal.text = "\(self.jumlah4.kanaan)"
+            self.nazarethTotal.text = "\(self.jumlah4.nazareth)"
+            self.yerikhoTotal.text = "\(self.jumlah4.yerikho)"
+            self.totalBySchedule.text = "\(self.jumlah4.getTotal(input: 0))"
         }
     }
     
     func deleteDataInSchedule() {
-        let ibadah1Clear = DataService.ds.REF_SCHEDULES.child("ibadah1").child("scheduleName").child("disciplesHere")
-        ibadah1Clear.removeValue()
-        let ibadah2Clear = DataService.ds.REF_SCHEDULES.child("ibadah2").child("scheduleName").child("disciplesHere")
-        ibadah2Clear.removeValue()
-        let ibadah3Clear = DataService.ds.REF_SCHEDULES.child("ibadah3").child("scheduleName").child("disciplesHere")
-        ibadah3Clear.removeValue()
-        let ibadah4Clear = DataService.ds.REF_SCHEDULES.child("ibadah4").child("scheduleName").child("disciplesHere")
-        ibadah4Clear.removeValue()
-    }
-    
-    func countGrade(discGrade: String!) {
-        
-        if discGrade == KANA1 {
-            kana1Count += 1
-            totalCount += 1
-            kana1Total.text = "\(kana1Count)"
-        } else if discGrade == KANA2 {
-            kana2Count += 1
-            totalCount += 1
-            kana2Total.text = "\(kana2Count)"
-        } else if discGrade == BETLEHEM {
-            betlehemCount += 1
-            totalCount += 1
-            betlehemTotal.text = "\(betlehemCount)"
-        } else if discGrade == YERUSALEM {
-            yerusalemCount += 1
-            totalCount += 1
-            yerusalemTotal.text = "\(yerusalemCount)"
-        } else if discGrade == SINAI {
-            sinaiCount += 1
-            totalCount += 1
-            sinaiTotal.text = "\(sinaiCount)"
-        } else if discGrade == YUDEA {
-            yudeaCount += 1
-            totalCount += 1
-            yudeaTotal.text = "\(yudeaCount)"
-        } else if discGrade == SAMARIA {
-            samariaCount += 1
-            totalCount += 1
-            samariaTotal.text = "\(samariaCount)"
-        } else if discGrade == GALILEA {
-            galileaCount += 1
-            totalCount += 1
-            galileaTotal.text = "\(galileaCount)"
-        } else if discGrade == KANAAN {
-            kanaanCount += 1
-            totalCount += 1
-            kanaanTotal.text = "\(kanaanCount)"
-        } else if discGrade == NAZARETH {
-            nazarethCount += 1
-            totalCount += 1
-            nazarethTotal.text = "\(nazarethCount)"
-        } else if discGrade == YERIKHO {
-            yerikhoCount += 1
-            totalCount += 1
-            yerikhoTotal.text = "\(yerikhoCount)"
-        }
-        
+        DataService.ds.REF_SCHEDULES.removeValue()
+        absenAnak.removeAll()
+        absen1.removeAll()
+        absen2.removeAll()
+        absen3.removeAll()
+        absen4.removeAll()
+        tableViewAbsen.reloadData()
     }
     
     func makeZero() {
-        kana1Count = 0
         kana1Total.text = "0"
-        kana2Count = 0
         kana2Total.text = "0"
-        betlehemCount = 0
         betlehemTotal.text = "0"
-        yerusalemCount = 0
         yerusalemTotal.text = "0"
-        sinaiCount = 0
         sinaiTotal.text = "0"
-        yudeaCount = 0
         yudeaTotal.text = "0"
-        samariaCount = 0
         samariaTotal.text = "0"
-        galileaCount = 0
         galileaTotal.text = "0"
-        kanaanCount = 0
         kanaanTotal.text = "0"
-        nazarethCount = 0
         nazarethTotal.text = "0"
-        yerikhoCount = 0
         yerikhoTotal.text = "0"
-        totalCount = 0
         totalBySchedule.text = "0"
     }
     
@@ -398,4 +356,69 @@ class MainMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: SEGUE_SEARCH, sender: UIButton.self)
     }
     
+}
+
+struct calc {
+    
+    var kana1 = 0
+    var kana2 = 0
+    var betlehem = 0
+    var yerusalem = 0
+    var sinai = 0
+    var yudea = 0
+    var galilea = 0
+    var samaria = 0
+    var kanaan = 0
+    var nazareth = 0
+    var yerikho = 0
+    
+    var total = 0
+    
+    mutating func addCap(currGrade: String!){
+        
+        if currGrade == KANA1 {
+            kana1 += 1
+        } else if currGrade == KANA2 {
+            kana2 += 1
+        } else if currGrade == BETLEHEM {
+            betlehem += 1
+        } else if currGrade == YERUSALEM {
+            yerusalem += 1
+        } else if currGrade == SINAI {
+            sinai += 1
+        } else if currGrade == YUDEA {
+            yudea += 1
+        } else if currGrade == SAMARIA {
+            samaria += 1
+        } else if currGrade == GALILEA {
+            galilea += 1
+        } else if currGrade == KANAAN {
+            kanaan += 1
+        } else if currGrade == NAZARETH {
+            nazareth += 1
+        } else if currGrade == YERIKHO {
+            yerikho += 1
+        }
+    }
+    
+    mutating func getTotal(input: Int) -> Int {
+        
+        total = kana1 + kana2 + betlehem + yerusalem + sinai + yudea + galilea + samaria + kanaan + nazareth + yerikho
+        return total
+    }
+    
+    mutating func emptyAll() {
+        
+        kana1 = 0
+        kana2 = 0
+        betlehem = 0
+        yerusalem = 0
+        sinai = 0
+        yudea = 0
+        galilea = 0
+        samaria = 0
+        kanaan = 0
+        nazareth = 0
+        yerikho = 0
+    }
 }

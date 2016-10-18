@@ -13,16 +13,18 @@ class AbsenCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var gradeLbl: UILabel!
     
-    var anak: Anak!
+    var anak: Absen!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    func configureCell(anak: Anak){
+    func configureCell(anak: Absen){
         self.nameLbl.text = anak.name
         self.gradeLbl.text = anak.grade
     }
+    
+    
     
 }

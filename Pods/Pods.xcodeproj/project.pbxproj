@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		079C88EB120535A87150C01F807DF8BC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0D24A86E7E8CAA8EB0EBCF3614050 /* Device.swift */; };
+		079C88EB120535A87150C01F807DF8BC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D4CBC2E4077AE7045A7FDED7923205 /* Device.swift */; };
 		08269A23C95453152F78C4EA0065C917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		08754A16B6E6D0DD229EB5F93DC3DEBE /* KRProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACF1D3176F10A4347E388ACFEEF5AD8 /* KRProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13CB42BBEA76B10DDCAF0F1C0755E518 /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC4E5FFF98F698804F3F019FFD9CCA /* KRActivityIndicatorViewStyle.swift */; };
+		08754A16B6E6D0DD229EB5F93DC3DEBE /* KRProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 266765642EAC7C2975A482B02538CE36 /* KRProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CB42BBEA76B10DDCAF0F1C0755E518 /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AA8BAF0E325D29F59178F901C1BA0 /* KRActivityIndicatorViewStyle.swift */; };
 		1D0F6D6E8004E1E9B67CBF734FC63392 /* Pods-Sunday School-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A029A97D1EB5024F85C7E0596C652 /* Pods-Sunday School-dummy.m */; };
-		29F218947F981BF2816F08CF9B212E0F /* KRProgressHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAB91425DD477A45FAAB3510BBF64E8 /* KRProgressHUDExtensions.swift */; };
-		2FF064A8900F4906454B97F4D1D4DA11 /* DeviceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CED5FD9987541F328F6FA4C1F9D1CC2A /* DeviceKit-dummy.m */; };
-		5BAF832E5A2CE0FDFEC4F1865F75ED79 /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4382E76423FA388D9EACD84FD234A /* PMAlertController.swift */; };
+		29F218947F981BF2816F08CF9B212E0F /* KRProgressHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784D574D110D1EE66211659F81B21E4 /* KRProgressHUDExtensions.swift */; };
+		2FF064A8900F4906454B97F4D1D4DA11 /* DeviceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F09245C2F48847492B2C81F0E6C0AD8E /* DeviceKit-dummy.m */; };
+		5BAF832E5A2CE0FDFEC4F1865F75ED79 /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA60DD35E784572E16B843E70EFE51 /* PMAlertController.swift */; };
 		6A91AC0152233BBA5BBF0100DDFEF735 /* PMAlertController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C87197BCB04E709C91108E60CD7D1037 /* PMAlertController.bundle */; };
-		6E0AA1F234DEF011D609D735B547598D /* DeviceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31B50519A277BE25D950A87A7770AB17 /* DeviceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		732FEBF28FA99E93103F3B8D448CDED0 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F95DA17C0F2E7F972CF94BC55B6B7 /* KRProgressHUDViewController.swift */; };
+		6E0AA1F234DEF011D609D735B547598D /* DeviceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C613C3FDA3DE944887AE01BA35815252 /* DeviceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		732FEBF28FA99E93103F3B8D448CDED0 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E440210ADD8BC1678E5E9FA3988711E /* KRProgressHUDViewController.swift */; };
 		7685FA859CBA26D92919C2CD8466F5B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		7772DF8472F83746E69C2A22FA746C8E /* KRProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 625DFB28CFC919AF6F2FE5FBFA23A796 /* KRProgressHUD-dummy.m */; };
-		7C73D1F1978E496D29334C5E3FD8F1B9 /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D695F85138C9B69A3DF15D7EA2676F71 /* SwiftyTimer-dummy.m */; };
-		7DCFE8B560F0D4D7889A1AF1539167F2 /* PMAlertController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B702CB1693C48F005AB20C52B711528 /* PMAlertController.xib */; };
-		96238B96A9BB702EA5D0101816222D67 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B702CB1693C48F005AB20C52B711528 /* PMAlertController.xib */; };
-		9A7DEB3560CF4F5B9883FD5D44925B08 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135E5C74B0FE163D30D7B055B1098A8 /* KRProgressHUD.swift */; };
-		9B532751B362904EBE09E93653BA1208 /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B43395A38EC2368A17DE089BB60E5F4 /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FF23F00AD4E903319D63E06C4F259F5 /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216226C8CD04BBEA778A498EE48C27BB /* KRProgressHUDIconType.swift */; };
-		A649E0E880C616DFFF16A705F3CB7ECA /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65901A108AD4FE0F199780EB9D1BD81 /* PMAlertAction.swift */; };
+		7772DF8472F83746E69C2A22FA746C8E /* KRProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE00202BDA2486CD573907F36654588B /* KRProgressHUD-dummy.m */; };
+		7C73D1F1978E496D29334C5E3FD8F1B9 /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B994FD47D147B8EFCECB3D459930B8 /* SwiftyTimer-dummy.m */; };
+		7DCFE8B560F0D4D7889A1AF1539167F2 /* PMAlertController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 79D75E4AE2175D9B680582BB57599810 /* PMAlertController.xib */; };
+		96238B96A9BB702EA5D0101816222D67 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D75E4AE2175D9B680582BB57599810 /* PMAlertController.xib */; };
+		9A7DEB3560CF4F5B9883FD5D44925B08 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51C691C0DBDDE4DD8733BBAD18C975 /* KRProgressHUD.swift */; };
+		9B532751B362904EBE09E93653BA1208 /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC8CBC02F3AD87ED1ACAB63C5BF43A10 /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FF23F00AD4E903319D63E06C4F259F5 /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F6FC913CBBC5FC3F446787B6244542 /* KRProgressHUDIconType.swift */; };
+		A649E0E880C616DFFF16A705F3CB7ECA /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7FDA00BB528C3AFA7182B3DD3ABEBF /* PMAlertAction.swift */; };
 		AE0144BE483E13F8E21ECF365DD32E08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		B4A030D240ADFA6ABB9BAE7C02433CDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		B625B340A6C88EBA3B01547CA12BEE0F /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A46EB2722A75AC624D18E181D4DD3D /* SwiftyTimer.swift */; };
-		BCAFB8B5EA45680ADBD72C790494B26A /* PMAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9140B893F86094716883741927282710 /* PMAlertController-dummy.m */; };
+		B625B340A6C88EBA3B01547CA12BEE0F /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6668C51DEA3B6574ECFE8DFCE993FC5C /* SwiftyTimer.swift */; };
+		BCAFB8B5EA45680ADBD72C790494B26A /* PMAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33B113F1D3ACAB3A056D4011BD513D /* PMAlertController-dummy.m */; };
 		C23288EE1D1BB21264EC1350BB27A7D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		DAAE08C7D6BA2FABE4AA8C1DFBA8213C /* PMAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 125EAF1FB8B15693BF6EA15BF784A4E0 /* PMAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAAE08C7D6BA2FABE4AA8C1DFBA8213C /* PMAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9209D0588B56E7442B4A2E8EEEE01958 /* PMAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE08525D02035CBCCBC862A109A4C90B /* Pods-Sunday School-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C881643BF2296339B2DEEA03DD4403C8 /* Pods-Sunday School-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E757A9C4EB546F3907E6EE4D08F32E07 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010E32F36689E0B3684DF04037B4862 /* KRActivityIndicatorView.swift */; };
+		E757A9C4EB546F3907E6EE4D08F32E07 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4AE539880C8870E2C4DB35361C39D /* KRActivityIndicatorView.swift */; };
 		F467C72888C760677F788A3FB120934D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,72 +77,73 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04362FF630E72299317705F7FD7098CA /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
-		0AFD76E331897F4924EDA6FF478E1749 /* KRProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.xcconfig; sourceTree = "<group>"; };
+		09C054035BFB2BF39FCBD4F1D969D264 /* PMAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PMAlertController.modulemap; sourceTree = "<group>"; };
+		0E51C691C0DBDDE4DD8733BBAD18C975 /* KRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUD.swift; path = KRProgressHUD/Classes/KRProgressHUD.swift; sourceTree = "<group>"; };
 		10BD8ED12A35BBAE0244201C11E40AB5 /* KRProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1135E5C74B0FE163D30D7B055B1098A8 /* KRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUD.swift; path = KRProgressHUD/Classes/KRProgressHUD.swift; sourceTree = "<group>"; };
-		125EAF1FB8B15693BF6EA15BF784A4E0 /* PMAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-umbrella.h"; sourceTree = "<group>"; };
-		146CD93912F69E84451BF1A007BB0087 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DF9E00DEB29888820D5E27F61EC145 /* KRProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		161823F195EC701DA7DECBEAA247F28F /* Pods-Sunday School-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sunday School-frameworks.sh"; sourceTree = "<group>"; };
+		164904F3724DA6D04F3D6248DCDB2DD0 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		1784D574D110D1EE66211659F81B21E4 /* KRProgressHUDExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDExtensions.swift; path = KRProgressHUD/Classes/KRProgressHUDExtensions.swift; sourceTree = "<group>"; };
 		1BC9157C63CD20AB2144145B8590E841 /* Pods-Sunday School.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sunday School.release.xcconfig"; sourceTree = "<group>"; };
-		216226C8CD04BBEA778A498EE48C27BB /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDIconType.swift; path = KRProgressHUD/Classes/KRProgressHUDIconType.swift; sourceTree = "<group>"; };
-		2472302C9C461C6BA5A46C187043D508 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		2B702CB1693C48F005AB20C52B711528 /* PMAlertController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PMAlertController.xib; path = Library/PMAlertController.xib; sourceTree = "<group>"; };
-		2C110353709441388A14C74FC3020108 /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
-		31B50519A277BE25D950A87A7770AB17 /* DeviceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-umbrella.h"; sourceTree = "<group>"; };
-		32EAD3651E6950D79639DFAA518D5D28 /* KRProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KRProgressHUD.modulemap; sourceTree = "<group>"; };
+		1E6E59D37D26DD8169867E306707339A /* DeviceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceKit.xcconfig; sourceTree = "<group>"; };
+		2479841BB202325E1A15F8784AE3ADFB /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		266765642EAC7C2975A482B02538CE36 /* KRProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		2EE8B8B4725C709738ADB204AE75CCD9 /* KRProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KRProgressHUD.modulemap; sourceTree = "<group>"; };
+		2EF877526C9E00EAFCC7677B2FC1C93C /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+		3466CC87890DA955A1B51E4BCB9C2080 /* KRProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.xcconfig; sourceTree = "<group>"; };
 		34FCD077C5DEC96B160E2E938975A4EE /* PMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		353E546DBF2FB5CF5845FB19A372D932 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35A78D16F693BD942111D8EF56C0CA19 /* KRProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		376AF4E68ECE01C85903FCA9F7DD213D /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
 		3A4A029A97D1EB5024F85C7E0596C652 /* Pods-Sunday School-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sunday School-dummy.m"; sourceTree = "<group>"; };
-		3E16A0A634660F99472214DC53345A85 /* PMAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PMAlertController.modulemap; sourceTree = "<group>"; };
-		4B43395A38EC2368A17DE089BB60E5F4 /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
+		3B89DEAE3519F2526810C957FDDC2A1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		401E6E8BCBF8CA9EA40BFA79F9A423B6 /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
+		40B994FD47D147B8EFCECB3D459930B8 /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
+		473C5F958F88658AF6000233AEE65C4F /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		4E33B113F1D3ACAB3A056D4011BD513D /* PMAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PMAlertController-dummy.m"; sourceTree = "<group>"; };
 		4F2DE82567DBDBE6A2ADF55C69594A4C /* Pods-Sunday School-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sunday School-resources.sh"; sourceTree = "<group>"; };
+		50D4AE539880C8870E2C4DB35361C39D /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorView.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorView.swift; sourceTree = "<group>"; };
 		50FCACD7EAB951ECF1E5D60D6B1B7268 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51512BBC97603AD5D65EF1012D071DEE /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		5672ED8D1AB7ACE92E041319B534E4EE /* PMAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-prefix.pch"; sourceTree = "<group>"; };
 		56BF158582BEBE58091044CF951FC0C0 /* DeviceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		625DFB28CFC919AF6F2FE5FBFA23A796 /* KRProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		66410201EAC46E41B634C4B8F66DCC0B /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		579384231F733F1D3BDB972100365F0E /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
+		6668C51DEA3B6574ECFE8DFCE993FC5C /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Sources/SwiftyTimer.swift; sourceTree = "<group>"; };
 		672C8D3ACFAF5A72C0EFD07559B5C017 /* Pods-Sunday School.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Sunday School.modulemap"; sourceTree = "<group>"; };
-		6A428A9DF4EB8661CB764F5D64D33D6D /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
-		6A7E2E83B77CFE52BC8A75DEAD2AD898 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		7256AA2E57DCDF61652587B55B16B45A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		7EEA84F30E79F7920815506F981BAFA6 /* PMAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PMAlertController.xcconfig; sourceTree = "<group>"; };
+		6D7FDA00BB528C3AFA7182B3DD3ABEBF /* PMAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertAction.swift; path = Library/PMAlertAction.swift; sourceTree = "<group>"; };
+		6F5AA8BAF0E325D29F59178F901C1BA0 /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorViewStyle.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		70777F68643E7F18D470C78315D246D3 /* ResourceBundle-PMAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PMAlertController-Info.plist"; sourceTree = "<group>"; };
+		72013D17060C96EDAEF458D71BD47920 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		79D75E4AE2175D9B680582BB57599810 /* PMAlertController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PMAlertController.xib; path = Library/PMAlertController.xib; sourceTree = "<group>"; };
 		8056A288C252775305AD9B40DCCD3E1F /* Pods-Sunday School-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sunday School-acknowledgements.plist"; sourceTree = "<group>"; };
-		83A46EB2722A75AC624D18E181D4DD3D /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Sources/SwiftyTimer.swift; sourceTree = "<group>"; };
-		8ACF1D3176F10A4347E388ACFEEF5AD8 /* KRProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		8DAB91425DD477A45FAAB3510BBF64E8 /* KRProgressHUDExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDExtensions.swift; path = KRProgressHUD/Classes/KRProgressHUDExtensions.swift; sourceTree = "<group>"; };
+		828DF6D91E245DD63D0B0417C9CE6C98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F6FC913CBBC5FC3F446787B6244542 /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDIconType.swift; path = KRProgressHUD/Classes/KRProgressHUDIconType.swift; sourceTree = "<group>"; };
 		8DE2ED5CE7516555118AE72FA0654F8F /* Pods_Sunday_School.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunday_School.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FFC4E5FFF98F698804F3F019FFD9CCA /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorViewStyle.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
-		9140B893F86094716883741927282710 /* PMAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PMAlertController-dummy.m"; sourceTree = "<group>"; };
-		9238AAA6A31247A357429E7077BB0B6E /* PMAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-prefix.pch"; sourceTree = "<group>"; };
+		90FE9E07143B587E31ED17740643A591 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9209D0588B56E7442B4A2E8EEEE01958 /* PMAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-umbrella.h"; sourceTree = "<group>"; };
+		92CA60DD35E784572E16B843E70EFE51 /* PMAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertController.swift; path = Library/PMAlertController.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93B6486A10EA4B7FD989A7CD9AC5D8C4 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
 		94CB1F43CA000C0254594F6C619F98D7 /* SwiftyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FA9539D1225A40F9B67DB102F8D621A /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+		95D4CBC2E4077AE7045A7FDED7923205 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Device.swift; sourceTree = "<group>"; };
+		98FDA1CB30118FB69A1FC2122547C3DB /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		9E440210ADD8BC1678E5E9FA3988711E /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDViewController.swift; path = KRProgressHUD/Classes/KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		9E919A74D4A8600D5CA6D11F439B6755 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A65901A108AD4FE0F199780EB9D1BD81 /* PMAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertAction.swift; path = Library/PMAlertAction.swift; sourceTree = "<group>"; };
+		A64E172242478908CF5F94B1FA26268C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A839F947C24DB194B08A19238EB04ACB /* Pods-Sunday School.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sunday School.debug.xcconfig"; sourceTree = "<group>"; };
-		B0FDFDC5BBC9EEC1B720AC9C643D993A /* DeviceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DeviceKit.modulemap; sourceTree = "<group>"; };
-		B1C27887D03F4BCEAE70442B8CB44E48 /* ResourceBundle-PMAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PMAlertController-Info.plist"; sourceTree = "<group>"; };
-		B29F99E0CE9325118355AE0E937E0022 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
-		B445611A5890CDBD0F5B6A38F4F0E3FD /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		B99A6B4B8EAC9BDB81E1E7CDF097FC22 /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
-		BA1F95DA17C0F2E7F972CF94BC55B6B7 /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDViewController.swift; path = KRProgressHUD/Classes/KRProgressHUDViewController.swift; sourceTree = "<group>"; };
-		BC5C41BCB2AECB923B42416BFD945883 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1CA8D4C909BBAAA45EA10F1F32421D7 /* DeviceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-prefix.pch"; sourceTree = "<group>"; };
-		C585CCC338936BE1BA44A62E1037888F /* DeviceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceKit.xcconfig; sourceTree = "<group>"; };
-		C6B4382E76423FA388D9EACD84FD234A /* PMAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertController.swift; path = Library/PMAlertController.swift; sourceTree = "<group>"; };
+		AB894A8E09EC13FB561F70F7A19F057B /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		AE00202BDA2486CD573907F36654588B /* KRProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		B175E55CE13BA03D00F8A493E20BE7E3 /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
+		BA0B6FB95373703474DC669E570D3092 /* PMAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PMAlertController.xcconfig; sourceTree = "<group>"; };
+		C613C3FDA3DE944887AE01BA35815252 /* DeviceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-umbrella.h"; sourceTree = "<group>"; };
 		C6CACECAB29C0F61F689BDE5FBB764C6 /* Pods-Sunday School-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sunday School-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C87197BCB04E709C91108E60CD7D1037 /* PMAlertController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMAlertController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C881643BF2296339B2DEEA03DD4403C8 /* Pods-Sunday School-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sunday School-umbrella.h"; sourceTree = "<group>"; };
-		CCF4F0CB0E1D81826A51DE8D5EAD338F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		CED5FD9987541F328F6FA4C1F9D1CC2A /* DeviceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeviceKit-dummy.m"; sourceTree = "<group>"; };
-		D0C0D24A86E7E8CAA8EB0EBCF3614050 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Device.swift; sourceTree = "<group>"; };
-		D695F85138C9B69A3DF15D7EA2676F71 /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
-		DCB874A914781D14E8A2F35140C99A3C /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		CC8CBC02F3AD87ED1ACAB63C5BF43A10 /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
+		D07B3C54C55941FB622BBB2A4EE3E134 /* DeviceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DeviceKit.modulemap; sourceTree = "<group>"; };
+		DCB2F9487B1173FE57001EEC55A4E87E /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E9E40DA4D484001132B698F8320928EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F010E32F36689E0B3684DF04037B4862 /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorView.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		F09245C2F48847492B2C81F0E6C0AD8E /* DeviceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeviceKit-dummy.m"; sourceTree = "<group>"; };
+		FDCD10664F6D4D64234F7C53CECC6DF6 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		FF4B8E37F6F1985EFB1D8B5484130AC8 /* DeviceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,42 +198,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		026BE18E19DE626BA5213A831DE4AE55 /* Frameworks */ = {
+		0A0F2B0BC3AB60B7AEB6A857487BD9ED /* PMAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				B445611A5890CDBD0F5B6A38F4F0E3FD /* GoogleNetworkingUtilities.framework */,
+				6D7FDA00BB528C3AFA7182B3DD3ABEBF /* PMAlertAction.swift */,
+				92CA60DD35E784572E16B843E70EFE51 /* PMAlertController.swift */,
+				79D75E4AE2175D9B680582BB57599810 /* PMAlertController.xib */,
+				BDE9FE6475D000B7EC3623027A2C2F0F /* Resources */,
+				EC8C919E772730BB927C5DDE72A4EF38 /* Support Files */,
+			);
+			path = PMAlertController;
+			sourceTree = "<group>";
+		};
+		12669F99E7F42161206007C37C63BD41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E919A74D4A8600D5CA6D11F439B6755 /* FirebaseCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1282A63925E506E61F15E738F5F9F2C6 /* FirebaseStorage */ = {
+		12BD3FB26197DF90A630B090E4655830 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53CE93C250F3C5A54F0D8FD571B9B092 /* Frameworks */,
-			);
-			path = FirebaseStorage;
-			sourceTree = "<group>";
-		};
-		12928B41D988F753C5AFF5629DF3FC04 /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				E6FC7948D2A9C1FF87BE688F278D3B77 /* Frameworks */,
-			);
-			path = GoogleSymbolUtilities;
-			sourceTree = "<group>";
-		};
-		1BFF24E5E48049A45026CCFF5250D36A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7256AA2E57DCDF61652587B55B16B45A /* FirebaseAnalytics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		215719D801FF8DB075F1A8BE98FC722A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6A428A9DF4EB8661CB764F5D64D33D6D /* FirebaseDatabase.framework */,
+				72013D17060C96EDAEF458D71BD47920 /* GoogleNetworkingUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,6 +244,64 @@
 			path = "Target Support Files/Pods-Sunday School";
 			sourceTree = "<group>";
 		};
+		3B4C6807C1909289729E3589853C2540 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3C3B1BF530C9BE798D0E9C337B8272B /* DeviceKit */,
+				5FC2508F4B13357A9211958F5AA3C396 /* Firebase */,
+				F3849788838A82651D35BD8C88C1A597 /* FirebaseAnalytics */,
+				C6A3ABFD309E21488CD5288E8970A647 /* FirebaseAuth */,
+				455EDEEF619A04F7885D692A4FB19269 /* FirebaseCore */,
+				DE4EBA656996363548528F05D0776414 /* FirebaseDatabase */,
+				DF25BC1A30586E978AE57DED1D36EACD /* FirebaseInstanceID */,
+				CDC233779C58872A702D95CBE7F050A7 /* FirebaseStorage */,
+				ECF701DDC7C583160F5FE529E7FD7CE7 /* GoogleInterchangeUtilities */,
+				3D139BDF65C3EB96933700D004406BD6 /* GoogleNetworkingUtilities */,
+				6C94E7F138185825EFE56D7D2B70FBD6 /* GoogleSymbolUtilities */,
+				729A6C686DB4C1F389B86B70A81727C3 /* GoogleUtilities */,
+				97DA6C6F23995AB1DB70551DA3C161A7 /* KRProgressHUD */,
+				0A0F2B0BC3AB60B7AEB6A857487BD9ED /* PMAlertController */,
+				911D9E8A1E9A16F68C9FA4CB8ED682D7 /* SwiftyTimer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C60F64A40FEBF9F8FA9471A8C4CDD7E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B89DEAE3519F2526810C957FDDC2A1F /* Info.plist */,
+				579384231F733F1D3BDB972100365F0E /* SwiftyTimer.modulemap */,
+				B175E55CE13BA03D00F8A493E20BE7E3 /* SwiftyTimer.xcconfig */,
+				40B994FD47D147B8EFCECB3D459930B8 /* SwiftyTimer-dummy.m */,
+				401E6E8BCBF8CA9EA40BFA79F9A423B6 /* SwiftyTimer-prefix.pch */,
+				CC8CBC02F3AD87ED1ACAB63C5BF43A10 /* SwiftyTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyTimer";
+			sourceTree = "<group>";
+		};
+		3D139BDF65C3EB96933700D004406BD6 /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				12BD3FB26197DF90A630B090E4655830 /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		3E538383DC65589F2EF5D1525E7020AE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D07B3C54C55941FB622BBB2A4EE3E134 /* DeviceKit.modulemap */,
+				1E6E59D37D26DD8169867E306707339A /* DeviceKit.xcconfig */,
+				F09245C2F48847492B2C81F0E6C0AD8E /* DeviceKit-dummy.m */,
+				FF4B8E37F6F1985EFB1D8B5484130AC8 /* DeviceKit-prefix.pch */,
+				C613C3FDA3DE944887AE01BA35815252 /* DeviceKit-umbrella.h */,
+				828DF6D91E245DD63D0B0417C9CE6C98 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DeviceKit";
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,28 +310,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		510C11E1830BAB13760A5FF65A7D963C /* Firebase */ = {
+		455EDEEF619A04F7885D692A4FB19269 /* FirebaseCore */ = {
 			isa = PBXGroup;
 			children = (
-				D684910BC88F9ED02BB48C4A8730F4E4 /* Analytics */,
+				12669F99E7F42161206007C37C63BD41 /* Frameworks */,
+			);
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		5FC2508F4B13357A9211958F5AA3C396 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A191DA9F7F7FD4EB3C2EB618A92EC736 /* Core */,
 			);
 			path = Firebase;
-			sourceTree = "<group>";
-		};
-		53CE93C250F3C5A54F0D8FD571B9B092 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9FA9539D1225A40F9B67DB102F8D621A /* FirebaseStorage.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		567DA5D378DDF46383DE9285053018A5 /* FirebaseAuth */ = {
-			isa = PBXGroup;
-			children = (
-				8BC664B9D67D15A0EC0C3350860E994B /* Frameworks */,
-			);
-			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
 		634E03887726A2993D18CE1848D37165 /* Products */ = {
@@ -300,51 +339,50 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68799B20B20E8609239A83469609622D /* FirebaseInstanceID */ = {
+		69970B7228E5AEACE7732830D149B6E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				66410201EAC46E41B634C4B8F66DCC0B /* FIRInstanceID.h */,
-				E893337BDD4EAC916E308B91CD1EAABD /* Frameworks */,
-			);
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		6D61872018B710EA89A164F332528D84 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6A7E2E83B77CFE52BC8A75DEAD2AD898 /* GoogleUtilities.framework */,
+				2EF877526C9E00EAFCC7677B2FC1C93C /* FirebaseStorage.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		700E550DD6E85AF74D4EE4754D361BDC /* DeviceKit */ = {
+		6C94E7F138185825EFE56D7D2B70FBD6 /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				D0C0D24A86E7E8CAA8EB0EBCF3614050 /* Device.swift */,
-				FBC1621995C85C6976C5A851E2686074 /* Support Files */,
+				CB48C745ADA03402FFDA3050F3B66BCF /* Frameworks */,
 			);
-			path = DeviceKit;
+			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		7957F045686BB97E88948E6B01A36020 /* Pods */ = {
+		6D4A0C8112C2BAA953FC8FBE9B05FDD3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				700E550DD6E85AF74D4EE4754D361BDC /* DeviceKit */,
-				510C11E1830BAB13760A5FF65A7D963C /* Firebase */,
-				A5A4DB51B3AA5DC85F91F41C5753CA19 /* FirebaseAnalytics */,
-				567DA5D378DDF46383DE9285053018A5 /* FirebaseAuth */,
-				86E24F492311399BDC617CD07E3EFB97 /* FirebaseDatabase */,
-				68799B20B20E8609239A83469609622D /* FirebaseInstanceID */,
-				1282A63925E506E61F15E738F5F9F2C6 /* FirebaseStorage */,
-				B39D47E6D1C7AB438243E36ACFE51C66 /* GoogleInterchangeUtilities */,
-				B1C6AE95992444AD16E1842485448A13 /* GoogleNetworkingUtilities */,
-				12928B41D988F753C5AFF5629DF3FC04 /* GoogleSymbolUtilities */,
-				D4F8BF206D4CA06D25D3D3D8B6213B42 /* GoogleUtilities */,
-				BF3E318F6996FF326AF757D0A0A1FDA1 /* KRProgressHUD */,
-				EC7A85F0F656D1C2D54B4A857AC0A5EF /* PMAlertController */,
-				AFEF4EFA9528E0DAC81698C46203064F /* SwiftyTimer */,
+				90FE9E07143B587E31ED17740643A591 /* Info.plist */,
+				2EE8B8B4725C709738ADB204AE75CCD9 /* KRProgressHUD.modulemap */,
+				3466CC87890DA955A1B51E4BCB9C2080 /* KRProgressHUD.xcconfig */,
+				AE00202BDA2486CD573907F36654588B /* KRProgressHUD-dummy.m */,
+				12DF9E00DEB29888820D5E27F61EC145 /* KRProgressHUD-prefix.pch */,
+				266765642EAC7C2975A482B02538CE36 /* KRProgressHUD-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/KRProgressHUD";
+			sourceTree = "<group>";
+		};
+		729A6C686DB4C1F389B86B70A81727C3 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA0FC57CADD5F43A311ACD9578E9BE0D /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		7949B6AC9774D460E65E02037A84B3E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				164904F3724DA6D04F3D6248DCDB2DD0 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -352,88 +390,96 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				7957F045686BB97E88948E6B01A36020 /* Pods */,
+				3B4C6807C1909289729E3589853C2540 /* Pods */,
 				634E03887726A2993D18CE1848D37165 /* Products */,
 				CE781FFB68BB89F5D3DE6E7023B67C46 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		81A54DD0900BAA9DE1FDDB89103DBDFC /* Support Files */ = {
+		80571A818F294B99ED53820E485DC901 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9E40DA4D484001132B698F8320928EF /* Info.plist */,
-				3E16A0A634660F99472214DC53345A85 /* PMAlertController.modulemap */,
-				7EEA84F30E79F7920815506F981BAFA6 /* PMAlertController.xcconfig */,
-				9140B893F86094716883741927282710 /* PMAlertController-dummy.m */,
-				9238AAA6A31247A357429E7077BB0B6E /* PMAlertController-prefix.pch */,
-				125EAF1FB8B15693BF6EA15BF784A4E0 /* PMAlertController-umbrella.h */,
-				B1C27887D03F4BCEAE70442B8CB44E48 /* ResourceBundle-PMAlertController-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PMAlertController";
-			sourceTree = "<group>";
-		};
-		86E24F492311399BDC617CD07E3EFB97 /* FirebaseDatabase */ = {
-			isa = PBXGroup;
-			children = (
-				215719D801FF8DB075F1A8BE98FC722A /* Frameworks */,
-			);
-			path = FirebaseDatabase;
-			sourceTree = "<group>";
-		};
-		8BC664B9D67D15A0EC0C3350860E994B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B29F99E0CE9325118355AE0E937E0022 /* FirebaseAuth.framework */,
+				473C5F958F88658AF6000233AEE65C4F /* FirebaseAuth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5A4DB51B3AA5DC85F91F41C5753CA19 /* FirebaseAnalytics */ = {
+		911D9E8A1E9A16F68C9FA4CB8ED682D7 /* SwiftyTimer */ = {
 			isa = PBXGroup;
 			children = (
-				1BFF24E5E48049A45026CCFF5250D36A /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		AFEF4EFA9528E0DAC81698C46203064F /* SwiftyTimer */ = {
-			isa = PBXGroup;
-			children = (
-				83A46EB2722A75AC624D18E181D4DD3D /* SwiftyTimer.swift */,
-				FBCC96A23AB0CAA4CC806CF9DEB4E821 /* Support Files */,
+				6668C51DEA3B6574ECFE8DFCE993FC5C /* SwiftyTimer.swift */,
+				3C60F64A40FEBF9F8FA9471A8C4CDD7E /* Support Files */,
 			);
 			path = SwiftyTimer;
 			sourceTree = "<group>";
 		};
-		B1C6AE95992444AD16E1842485448A13 /* GoogleNetworkingUtilities */ = {
+		97DA6C6F23995AB1DB70551DA3C161A7 /* KRProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				026BE18E19DE626BA5213A831DE4AE55 /* Frameworks */,
-			);
-			path = GoogleNetworkingUtilities;
-			sourceTree = "<group>";
-		};
-		B39D47E6D1C7AB438243E36ACFE51C66 /* GoogleInterchangeUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				E258245FD6C8E0778D7E6F5F74D0BB5A /* Frameworks */,
-			);
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		BF3E318F6996FF326AF757D0A0A1FDA1 /* KRProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				F010E32F36689E0B3684DF04037B4862 /* KRActivityIndicatorView.swift */,
-				8FFC4E5FFF98F698804F3F019FFD9CCA /* KRActivityIndicatorViewStyle.swift */,
-				1135E5C74B0FE163D30D7B055B1098A8 /* KRProgressHUD.swift */,
-				8DAB91425DD477A45FAAB3510BBF64E8 /* KRProgressHUDExtensions.swift */,
-				216226C8CD04BBEA778A498EE48C27BB /* KRProgressHUDIconType.swift */,
-				BA1F95DA17C0F2E7F972CF94BC55B6B7 /* KRProgressHUDViewController.swift */,
-				EA8AB14191AB2060E97E60C49CB1C1DC /* Support Files */,
+				50D4AE539880C8870E2C4DB35361C39D /* KRActivityIndicatorView.swift */,
+				6F5AA8BAF0E325D29F59178F901C1BA0 /* KRActivityIndicatorViewStyle.swift */,
+				0E51C691C0DBDDE4DD8733BBAD18C975 /* KRProgressHUD.swift */,
+				1784D574D110D1EE66211659F81B21E4 /* KRProgressHUDExtensions.swift */,
+				83F6FC913CBBC5FC3F446787B6244542 /* KRProgressHUDIconType.swift */,
+				9E440210ADD8BC1678E5E9FA3988711E /* KRProgressHUDViewController.swift */,
+				6D4A0C8112C2BAA953FC8FBE9B05FDD3 /* Support Files */,
 			);
 			path = KRProgressHUD;
+			sourceTree = "<group>";
+		};
+		A191DA9F7F7FD4EB3C2EB618A92EC736 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD10664F6D4D64234F7C53CECC6DF6 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		B6CE6FDD6B7EC1906FEFC41017368A2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2479841BB202325E1A15F8784AE3ADFB /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDE9FE6475D000B7EC3623027A2C2F0F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C6A3ABFD309E21488CD5288E8970A647 /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				80571A818F294B99ED53820E485DC901 /* Frameworks */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		CB48C745ADA03402FFDA3050F3B66BCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98FDA1CB30118FB69A1FC2122547C3DB /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDC233779C58872A702D95CBE7F050A7 /* FirebaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				69970B7228E5AEACE7732830D149B6E5 /* Frameworks */,
+			);
+			path = FirebaseStorage;
+			sourceTree = "<group>";
+		};
+		CE16990936512F93C9D3FC1333B826B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB894A8E09EC13FB561F70F7A19F057B /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE781FFB68BB89F5D3DE6E7023B67C46 /* Targets Support Files */ = {
@@ -444,77 +490,60 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D4F8BF206D4CA06D25D3D3D8B6213B42 /* GoogleUtilities */ = {
+		DA0FC57CADD5F43A311ACD9578E9BE0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D61872018B710EA89A164F332528D84 /* Frameworks */,
-			);
-			path = GoogleUtilities;
-			sourceTree = "<group>";
-		};
-		D684910BC88F9ED02BB48C4A8730F4E4 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				93B6486A10EA4B7FD989A7CD9AC5D8C4 /* Firebase.h */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		DACF1D10E9772E5DD111917C6D362CE4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		E258245FD6C8E0778D7E6F5F74D0BB5A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2472302C9C461C6BA5A46C187043D508 /* GoogleInterchangeUtilities.framework */,
+				DCB2F9487B1173FE57001EEC55A4E87E /* GoogleUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E6FC7948D2A9C1FF87BE688F278D3B77 /* Frameworks */ = {
+		DE4EBA656996363548528F05D0776414 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				CCF4F0CB0E1D81826A51DE8D5EAD338F /* GoogleSymbolUtilities.framework */,
+				E15A522F65C8DD260AEE9FEFC19BF696 /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		DF25BC1A30586E978AE57DED1D36EACD /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				376AF4E68ECE01C85903FCA9F7DD213D /* FIRInstanceID.h */,
+				CE16990936512F93C9D3FC1333B826B6 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		E15A522F65C8DD260AEE9FEFC19BF696 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51512BBC97603AD5D65EF1012D071DEE /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E893337BDD4EAC916E308B91CD1EAABD /* Frameworks */ = {
+		EC8C919E772730BB927C5DDE72A4EF38 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DCB874A914781D14E8A2F35140C99A3C /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EA8AB14191AB2060E97E60C49CB1C1DC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				146CD93912F69E84451BF1A007BB0087 /* Info.plist */,
-				32EAD3651E6950D79639DFAA518D5D28 /* KRProgressHUD.modulemap */,
-				0AFD76E331897F4924EDA6FF478E1749 /* KRProgressHUD.xcconfig */,
-				625DFB28CFC919AF6F2FE5FBFA23A796 /* KRProgressHUD-dummy.m */,
-				35A78D16F693BD942111D8EF56C0CA19 /* KRProgressHUD-prefix.pch */,
-				8ACF1D3176F10A4347E388ACFEEF5AD8 /* KRProgressHUD-umbrella.h */,
+				A64E172242478908CF5F94B1FA26268C /* Info.plist */,
+				09C054035BFB2BF39FCBD4F1D969D264 /* PMAlertController.modulemap */,
+				BA0B6FB95373703474DC669E570D3092 /* PMAlertController.xcconfig */,
+				4E33B113F1D3ACAB3A056D4011BD513D /* PMAlertController-dummy.m */,
+				5672ED8D1AB7ACE92E041319B534E4EE /* PMAlertController-prefix.pch */,
+				9209D0588B56E7442B4A2E8EEEE01958 /* PMAlertController-umbrella.h */,
+				70777F68643E7F18D470C78315D246D3 /* ResourceBundle-PMAlertController-Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/KRProgressHUD";
+			path = "../Target Support Files/PMAlertController";
 			sourceTree = "<group>";
 		};
-		EC7A85F0F656D1C2D54B4A857AC0A5EF /* PMAlertController */ = {
+		ECF701DDC7C583160F5FE529E7FD7CE7 /* GoogleInterchangeUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				A65901A108AD4FE0F199780EB9D1BD81 /* PMAlertAction.swift */,
-				C6B4382E76423FA388D9EACD84FD234A /* PMAlertController.swift */,
-				2B702CB1693C48F005AB20C52B711528 /* PMAlertController.xib */,
-				DACF1D10E9772E5DD111917C6D362CE4 /* Resources */,
-				81A54DD0900BAA9DE1FDDB89103DBDFC /* Support Files */,
+				B6CE6FDD6B7EC1906FEFC41017368A2A /* Frameworks */,
 			);
-			path = PMAlertController;
+			path = GoogleInterchangeUtilities;
 			sourceTree = "<group>";
 		};
 		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
@@ -526,32 +555,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		FBC1621995C85C6976C5A851E2686074 /* Support Files */ = {
+		F3849788838A82651D35BD8C88C1A597 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				B0FDFDC5BBC9EEC1B720AC9C643D993A /* DeviceKit.modulemap */,
-				C585CCC338936BE1BA44A62E1037888F /* DeviceKit.xcconfig */,
-				CED5FD9987541F328F6FA4C1F9D1CC2A /* DeviceKit-dummy.m */,
-				C1CA8D4C909BBAAA45EA10F1F32421D7 /* DeviceKit-prefix.pch */,
-				31B50519A277BE25D950A87A7770AB17 /* DeviceKit-umbrella.h */,
-				353E546DBF2FB5CF5845FB19A372D932 /* Info.plist */,
+				7949B6AC9774D460E65E02037A84B3E9 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DeviceKit";
+			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
-		FBCC96A23AB0CAA4CC806CF9DEB4E821 /* Support Files */ = {
+		F3C3B1BF530C9BE798D0E9C337B8272B /* DeviceKit */ = {
 			isa = PBXGroup;
 			children = (
-				BC5C41BCB2AECB923B42416BFD945883 /* Info.plist */,
-				04362FF630E72299317705F7FD7098CA /* SwiftyTimer.modulemap */,
-				2C110353709441388A14C74FC3020108 /* SwiftyTimer.xcconfig */,
-				D695F85138C9B69A3DF15D7EA2676F71 /* SwiftyTimer-dummy.m */,
-				B99A6B4B8EAC9BDB81E1E7CDF097FC22 /* SwiftyTimer-prefix.pch */,
-				4B43395A38EC2368A17DE089BB60E5F4 /* SwiftyTimer-umbrella.h */,
+				95D4CBC2E4077AE7045A7FDED7923205 /* Device.swift */,
+				3E538383DC65589F2EF5D1525E7020AE /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyTimer";
+			path = DeviceKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -914,7 +932,7 @@
 		};
 		0AD88259F62FFAACC1DD516E7F5F7FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEA84F30E79F7920815506F981BAFA6 /* PMAlertController.xcconfig */;
+			baseConfigurationReference = BA0B6FB95373703474DC669E570D3092 /* PMAlertController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -944,7 +962,7 @@
 		};
 		38A7E0D12762335E5948BA195A7D7C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEA84F30E79F7920815506F981BAFA6 /* PMAlertController.xcconfig */;
+			baseConfigurationReference = BA0B6FB95373703474DC669E570D3092 /* PMAlertController.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PMAlertController";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -961,7 +979,7 @@
 		};
 		4A47FAF5C648047A8085B84502DCCB62 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AFD76E331897F4924EDA6FF478E1749 /* KRProgressHUD.xcconfig */;
+			baseConfigurationReference = 3466CC87890DA955A1B51E4BCB9C2080 /* KRProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1061,7 +1079,7 @@
 		};
 		9C18955536E1D2108286550246023AD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C585CCC338936BE1BA44A62E1037888F /* DeviceKit.xcconfig */;
+			baseConfigurationReference = 1E6E59D37D26DD8169867E306707339A /* DeviceKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1092,7 +1110,7 @@
 		};
 		A9B174B7833F882C473AAE0D7FE75CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEA84F30E79F7920815506F981BAFA6 /* PMAlertController.xcconfig */;
+			baseConfigurationReference = BA0B6FB95373703474DC669E570D3092 /* PMAlertController.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PMAlertController";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1109,7 +1127,7 @@
 		};
 		B3EBC6D500F88E4BB1375A04454EDE31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C585CCC338936BE1BA44A62E1037888F /* DeviceKit.xcconfig */;
+			baseConfigurationReference = 1E6E59D37D26DD8169867E306707339A /* DeviceKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1139,7 +1157,7 @@
 		};
 		C426000167A523A6078DBB6FDD91B02B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEA84F30E79F7920815506F981BAFA6 /* PMAlertController.xcconfig */;
+			baseConfigurationReference = BA0B6FB95373703474DC669E570D3092 /* PMAlertController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1208,7 +1226,7 @@
 		};
 		CB2A7B1BB10EEFFA7606E09E72754F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C110353709441388A14C74FC3020108 /* SwiftyTimer.xcconfig */;
+			baseConfigurationReference = B175E55CE13BA03D00F8A493E20BE7E3 /* SwiftyTimer.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1239,7 +1257,7 @@
 		};
 		DA248DEB700842A5BCF84429E05F4A05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C110353709441388A14C74FC3020108 /* SwiftyTimer.xcconfig */;
+			baseConfigurationReference = B175E55CE13BA03D00F8A493E20BE7E3 /* SwiftyTimer.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1269,7 +1287,7 @@
 		};
 		DE81C2A506DCE7A0E9912CCAFEDD2C52 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AFD76E331897F4924EDA6FF478E1749 /* KRProgressHUD.xcconfig */;
+			baseConfigurationReference = 3466CC87890DA955A1B51E4BCB9C2080 /* KRProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

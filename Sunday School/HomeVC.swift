@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var usernameTxt: FancyField!
     @IBOutlet weak var passwordTxt: FancyField!    
     @IBOutlet weak var headerView: HeaderView!
+    var lastUsage: FIRDatabaseReference!
     
     
     
@@ -30,6 +31,7 @@ class HomeVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDefaults.standard.value(forKey: KEY_UID) != nil {
+            self.checkLogTime()
             self.performSegue(withIdentifier: SEGUE_LOGGED_IN, sender: nil)
         }
     }
@@ -39,9 +41,9 @@ class HomeVC: UIViewController {
         if let email = usernameTxt.text, let pwd = passwordTxt.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
-                    print("DAVID: Email User authenticated with Firebase")
                     if let user = user {
                         let userData = ["provider": user.providerID]
+                        self.checkLogTime()
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
@@ -55,6 +57,32 @@ class HomeVC: UIViewController {
                 }
             })
         
+        }
+    }
+    
+    func checkLogTime() {
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        lastUsage = DataService.ds.REF_USERS.child(userID!)
+        let calendar = NSCalendar.current
+        let timeStamp = NSDate().timeIntervalSince1970
+        lastUsage.observeSingleEvent(of: .value, with: { (snapshot) in
+            let timeFromServer = snapshot.value as! [String : AnyObject]
+            let timeInDecimal = timeFromServer["logTime"] as! Double
+            let date = NSDate(timeIntervalSince1970: timeInDecimal)
+            let currDate = NSDate(timeIntervalSince1970: timeStamp)
+            let compServer = calendar.dateComponents([.year, .month, .day, .hour], from: date as Date)
+            let compCurrent = calendar.dateComponents([.year, .month, .day, .hour], from: currDate as Date)
+            let serverDay = compServer.day
+            let currentDay = compCurrent.day
+            if serverDay != currentDay {
+                let editLog: Dictionary<String, AnyObject> = [
+                    "logTime": timeStamp as AnyObject
+                ]
+                let firebaseEditTime = DataService.ds.REF_USERS.child(userID!)
+                firebaseEditTime.updateChildValues(editLog)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
     

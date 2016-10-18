@@ -120,6 +120,7 @@ class TweakMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
                     }
                 }
             }
+            self.dataAnak.sort { $0.name < $1.name }
             self.tableView.reloadData()
         })
     }
